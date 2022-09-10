@@ -1,0 +1,723 @@
+/*star global rules*/
+:root{
+    --first-color: #ffe500;
+    --second-color: #bdbdbd;
+    --third-color: #f5f5f5;
+}
+*{
+    -webkit-box-sizing:border-box;3
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    
+}
+.logo{
+    font-size: 30px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.istar{
+    font-size: 50px;
+    color: var(--first-color);
+}
+
+.hstar{
+    padding-top: 50px;
+    font-size: 30px;
+    letter-spacing: 20px
+}
+.pstar{
+    color: var(--second-color);
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 20px;
+    line-height: 2;
+}
+/*small*/
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+
+/*medium*/
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+/*larg*/
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/*End global rules*/
+/* Start header and land */
+.header{
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+    color: azure;
+    padding: 0 20px;
+}
+.header .container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+.header .container i:first-of-type{
+    color: black;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+.header .container i:last-of-type{
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    transform: rotate(180deg);
+}
+.header .container i:last-of-type:hover + ul{
+    display: block;
+}
+
+.header .container ul{
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background-color: var(--third-color);
+    width: 200px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    display: none;
+    
+}
+.header .container ul::before{
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    top: -20px;
+    right: 0;
+    border-color: transparent transparent var(--third-color) transparent;
+}
+.header .container ul li{
+    padding: 10px 10px ;
+    border-bottom: 1px solid black;
+    
+}
+.header .container .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.header .container .text h1{
+    letter-spacing: 10px;
+}
+.header .container .text p{
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.header .container .text a{
+    text-decoration: none;
+    color: black;
+    background-color: var(--first-color);
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+@media (max-width: 768px){
+    .header{
+        background-image: url(../images/back-phone.jpg);
+    }
+}
+/* End header and land */
+
+/*Start land*/
+.land .container{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0;
+    
+}
+.land .container i{
+    color: var(--first-color);
+    font-size: 60px;
+}
+.land .container .text{
+    padding-top: 50px;
+    color: var(--second-color);
+    font-size: 20px;
+    font-weight: bold;
+    width: 60%;
+    text-align: center;
+}
+/*End land*/
+/*Start Services*/
+.services{
+    background-color: var(--third-color);
+    height: fit-content;
+}
+.services .container{
+    padding-top: 70px;
+    text-align: center;
+}
+.services .container .box-container{
+    display: flex;
+    padding-top: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.services .container .box-container .box{
+    margin-bottom: 180px;
+}
+.services .container .box-container .box .boxfirst{
+    background-color: white;
+    margin: 0 10px;
+    box-shadow: 0px 0px 3px 0px var(--second-color);
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px ;
+    
+}
+.services .container .box-container .box .boxfirst i{
+    color: var(--first-color);
+    font-size: 40px
+}
+.services .container .box-container .box .boxfirst h2{
+    padding: 20px 0;
+    letter-spacing: 5px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.services .container .box-container .box .boxfirst p{
+    line-height: 1.5;
+    color: var(--second-color);
+    font-weight: bold;
+    font-size: 15px;
+}
+.services .container .box-container .box .boxlast{
+    background-color: white;
+    margin: 30px 10px;
+    box-shadow: 0px 0px 3px 0px var(--second-color);
+    height: fit-content;
+    text-align: left;
+    padding: 10px;
+}
+.services .container .box-container .box .boxlast .boxx{
+    position: relative;
+    padding-bottom: 20px;
+
+}
+.services .container .box-container .box .boxlast h2{
+    font-weight: 500;
+}
+.services .container .box-container .box .boxlast .back{
+    position: absolute;
+    width: 100%;
+    background-color: var(--third-color);
+    height: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+.services .container .box-container .box .boxlast .back span{
+    background-color: var(--first-color);
+    position: absolute;
+    height: 5px;
+}
+
+@media(max-width:768px){
+    .services .container .box-container .box{
+        flex-basis: 100%;
+    }
+}
+@media(min-width:768px){
+    .services .container .box-container .box{
+        flex-basis: 50%;
+    }
+}
+@media(min-width:992px){
+    .services .container .box-container .box{
+        flex-basis: 25%;
+    }
+}
+/*End Services*/
+/*Start Footer*/
+.footer{
+    background-color: black;
+}
+.footer .container{
+    display: flex;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.footer .container .box .text{
+    background-color: white;
+    margin: 10px;
+    padding: 20px 0;
+
+}
+.footer .container .box h3{
+    letter-spacing: 5px;
+    padding-bottom: 10px
+}
+@media(max-width:768px){
+    .footer .container .box{
+        flex-basis: 100%;
+    }
+}
+@media(min-width:768px){
+    .footer .container .box{
+        flex-basis: 50%;
+    }
+}
+@media(min-width:992px){
+    .footer .container .box{
+        flex-basis: 25%;
+    }
+}
+/*End Footer*/
+/*Start Portfolio*/
+.portfolio .container{
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.portfolio .container .titles{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    
+}
+.portfolio .container .titles .title{
+    padding: 20px;
+    font-size: 150%;
+    font-weight: 500;
+    margin: 70px 0;
+}
+.portfolio .container .titles .title:not(.portfolio .container .titles .title:nth-of-type(3)){
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+
+}
+
+.portfolio .container .titles .title:nth-of-type(3){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio .container .titles .title i{
+    position: absolute;
+    background-color: black;
+    color: white;
+    min-height: 90px;
+    min-width: 90px;
+    font-size: 60px;
+    
+}
+.portfolio .container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 5px;
+}
+.portfolio .container .box-container .box{
+    position: relative;
+    overflow: hidden;
+}
+.portfolio .container .box-container .box img{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+.portfolio .container .box-container .box .text{
+    width: 90%;
+    background-color: white;
+    position: absolute;
+    top: 145%;
+    transform: translateY(-50%);
+    margin-left: 5%;
+    height: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+} 
+.portfolio .container .box-container .box .text::after{
+    content: "";
+    position: absolute;
+    background-color: var(--first-color);
+    width: 70%;
+    height: 25%;
+    top: -25%;
+    left: 15%;
+    opacity: 0.7;
+}
+.portfolio .container .box-container .box .text::before{
+    content: "";
+    position: absolute;
+    background-color: var(--first-color);
+    width: 70%;
+    height: 25%;
+    bottom: -25%;
+    left: 15%;
+    opacity: 0.7;
+}
+.portfolio .container .box-container .box:hover .text{
+    top: 50%;
+}
+.portfolio .container .box-container .box:hover img{
+    transform: rotate(2deg) scale(1.3,1.3);
+
+}
+.portfolio .container .box-container .box p{
+    color: var(--second-color);
+    font-weight: bold;
+    padding-top: 15px;
+}
+.portfolio .container .more{
+    margin-top: 50px;
+}
+.portfolio .container a{
+    text-decoration: none;
+    color: black;
+    background-color: var(--first-color);
+    padding: 10px 30px;
+    font-weight: bold;
+
+}
+
+/*End Portfolio*/
+/*Start Video*/
+.video{
+    background-image: url(../images/back-back.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.video .container{
+    padding: 150px 0;
+    color: var(--first-color);
+}
+.video .container p{
+    border: 2px solid var(--first-color);
+    width: fit-content;
+    margin: auto;
+    padding: 15px 50px;
+    letter-spacing: 6px;
+    font-weight: bold;   
+}
+
+/*End Video*/
+/*Start Team*/
+.team .container{
+    text-align: center;
+    padding-top: 70px;
+}
+.team .container .mainhead{
+    margin-bottom: 60px;
+}
+.team .container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(262.5px, 1fr));
+    grid-gap: 30px;
+}
+.team .container .box-container .box{
+    position: relative;
+    margin-bottom: 115px
+}
+.team .container .box-container .box img{
+    height: 100%;
+    width: 100%;
+}
+.team .container .box-container .box .text h3{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255 229 0/ 70%);
+    width: 100%;
+    padding: 10px;
+    letter-spacing: 3px;
+}
+.team .container .box-container .box .text p{
+    position: absolute;
+    top: 100%;
+    box-shadow: 0px 0px 3px 0px var(--second-color);
+    padding: 15px 30px;
+}
+
+/*End Team*/
+/*Start Articles*/
+.articles{
+    margin-top: 60px;
+    position: relative;
+    margin-bottom: 270px
+}
+.articles::after{
+    content: "";
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background-color: var(--first-color);
+    z-index: -1;
+    top: 50%;
+}
+.articles .container{
+    position: relative;
+}
+.articles .container .text1{
+    background-color: black;
+    color: white;
+    width: 45%;
+    padding: 40px;
+    line-height: 2.4;
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+.articles .container .text2{
+    position: absolute;
+    right: 0;
+    width: 45%;
+    padding: 40px;
+    margin-right: 50px;
+    top: 0;
+}
+.articles .container .text2 p{
+    color: var(--second-color);
+    font-weight: bold;
+    line-height: 2;
+    text-align: center;
+}
+.articles .container .text2 h4{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 25px;
+} 
+
+.articles .container .text3{
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding: 40px;
+    margin-right: 50px;
+    padding-top: 60px;
+}
+.articles .container .text3 p{
+    color: var(--second-color);
+    font-weight: bold;
+    line-height: 2;
+    text-align: center;
+}
+.articles .container .text3 h4{
+    display: flex;
+    padding-top: 25px;
+} 
+.articles .container img{
+    width: 43.8%;
+    height: 350px;
+    position: absolute;
+    right: 0;
+    top: 200px;
+}
+@media(max-width:768px){
+    .articles{
+        margin-bottom: 420px;
+    }
+    .articles::after{
+        position: relative;
+    }
+    .articles .container .text1{
+        width: 100%;
+        text-align: center;
+    }
+    .articles .container .text2{
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    .articles .container .text2 h4,
+    .articles .container .text3 h4{
+        justify-content: center;
+    }
+    .articles .container .text3{
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    .articles .container img{
+        width: 100%;
+        top:100%;
+    }
+    .articles .container .text3{
+        padding-top: 0;
+    }
+}
+/*End Articles*/
+/*Start End*/
+.end{
+    background-color: black;
+    color: white;
+    padding: 100px 0;
+}
+.end .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(262.5px, 1fr));
+    grid-gap: 15px;
+}
+.end .container .text1{
+    line-height: 2;
+    margin-bottom: 50px;
+}
+.end .container .text1 i{
+    color: black;
+    background-color: white;
+    margin-left: 20px;
+}
+.end .container .text1 p:first-of-type{
+    padding: 50px 0;
+    width: 100%;
+}
+.end .container .text1 p span{
+    color: var(--first-color);
+}
+.end .container .text2{
+    margin-bottom: 50px;
+}
+.end .container .text2 h3{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.end .container .text2 ul li{
+    line-height: 3;
+    list-style-type: none;
+}
+.end .container .text2 ul li a{
+    text-decoration: none;
+    color: white;
+}
+.end .container .text3{
+    margin-bottom: 50px;
+}
+.end .container .text3 h3{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.end .container .text3 ul li{
+    line-height: 3;
+    list-style-type: none;
+}
+.end .container .text3 ul li a{
+    text-decoration: none;
+    color: white;
+}
+.end .container .text4 h3{
+    font-size: 20px;
+}
+.end .container .text4 p{
+    line-height: 2;
+    padding: 40px 0 50px 0;
+    width: 100%;
+
+}
+.end .container .text4 a{
+    text-decoration: none;
+    color: black;
+    background-color: var(--first-color);
+    border-radius: 20px;
+    padding:4% 25%;
+}
+.end .container .text4 .icons{
+    margin-top: 60px;
+    display: flex;
+    height: 50px;
+}
+.end .container .text4 i{
+    font-size: 30px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px
+}
+@media(max-width:768px){
+    .end{
+        text-align: center;
+    }
+    .end .container .text1 i{
+        margin: auto;
+    }
+    .end .container .text4 .icons{
+        justify-content: center;
+    }
+}
+/*End End*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
